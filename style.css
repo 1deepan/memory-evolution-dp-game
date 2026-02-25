@@ -1,6 +1,137 @@
-body{font-family:Arial;background:#020617;color:white;text-align:center;padding:40px;} 
-#grid{display:grid;grid-template-columns:repeat(4,70px);gap:10px;justify-content:center;margin:20px;} 
-.cell{background:#1e293b;padding:18px;border-radius:8px;cursor:pointer;} 
-.active{background:#22c55e;} 
-.path{background:#38bdf8;} 
-button{background:#22c55e;border:none;padding:12px 20px;color:white;font-size:16px;cursor:pointer;} 
+/* ===== Global ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+/* ===== Layout ===== */
+.container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  padding: 30px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Cards ===== */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Controls ===== */
+.controls input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  color: white;
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.secondary {
+  background: #334155;
+}
+
+/* ===== DP Table ===== */
+.dp-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.dp-cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(56,189,248,0.15);
+  border-radius: 12px;
+  font-weight: bold;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Result ===== */
+.result {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
