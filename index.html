@@ -1,14 +1,40 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>Memory Evolution DP Visualizer</title> 
-<link rel="stylesheet" href="style.css"> 
-</head> 
-<body> 
-<h1>?? Interactive Memory Evolution DP Visualizer</h1> 
-<p>Click cells to change cost. Then press Visualize.</p> 
-<div id="grid"></div> 
-<button onclick="runDP()">Visualize DP</button> 
-<script src="dp.js"></script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Evolution DP Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="dp.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>🧠 Memory Evolution DP Game</h1>
+    <p class="subtitle">Visualize Dynamic Programming Like a Pro</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Controls -->
+    <div class="card controls">
+      <h2>⚙️ Controls</h2>
+      <input type="number" id="inputN" placeholder="Enter N value" />
+      <button id="runBtn">Run DP</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+
+    <!-- Output -->
+    <div class="card output">
+      <h2>📊 DP Visualization</h2>
+      <div id="dpTable" class="dp-table"></div>
+      <div id="result" class="result"></div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Built with ❤️ | Dynamic Programming Visualizer</p>
+  </footer>
+
+</body>
+</html>
